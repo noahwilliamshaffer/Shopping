@@ -1,0 +1,115 @@
+.payment {
+	background: var(--grey);
+}
+.paymentContainer {
+	padding: 20px 0;
+}
+.paymentContainer > h1 {
+	text-align: center;
+	padding: 10px;
+	font-weight: 400;
+	background: var(--dark);
+}
+.paymentContainer > h1 > a {
+	text-decoration: none !important;
+	color: var(--light);
+}
+.paymentSection {
+	display: flex;
+	padding: 20px;
+	margin: 0 20px;
+	border-bottom: 1px solid var(--icon-bg);
+}
+
+.paymentInfo,
+.paymentPriceContainer {
+	max-width: 600px;
+}
+
+.paymentInfo > p {
+	margin: 10px 0;
+}
+
+.paymentInfo > p > input {
+	background: var(--dark);
+	border-radius: 5px;
+	padding: 5px;
+	border: none;
+	color: var(--head-light);
+}
+
+.cardInfo {
+	background: var(--dark);
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.amount,
+.text {
+	float: right;
+}
+
+.paymentTitle {
+	flex: 0.4;
+}
+.paymentItems,
+.paymentAddress,
+.paymentDetails,
+.paymentTotal {
+	flex: 0.6;
+}
+
+.disclaimer {
+	font-size: 10px;
+	opacity: 0.8;
+	margin-bottom: 20px;
+}
+
+.paymentButton {
+	background: var(--gradient);
+	border-radius: 25px;
+	padding: 10px;
+	border: none;
+	margin-top: 20px;
+	color: var(--white);
+}
+
+.paymentButton:hover {
+	cursor: pointer;
+	background: var(--purple);
+}
+
+.paymentButton:disabled {
+	cursor: not-allowed;
+	background: var(--purple);
+	opacity: 20%;
+}
+
+@media screen and (max-width: 768px) {
+	.paymentSection {
+		flex-direction: column;
+		padding: 20px 0px;
+	}
+	.paymentTitle,
+	.paymentItems,
+	.paymentAddress,
+	.paymentDetails,
+	.paymentTotal {
+		flex: 1;
+		flex-basis: 100%;
+	}
+
+	.paymentInfo > p {
+		margin: 10px 0px;
+		width: 100%;
+	}
+
+	.text {
+		float: unset;
+		width: calc(100% - 10px);
+	}
+
+	.paymentInfo {
+		max-width: unset;
+	}
+}
